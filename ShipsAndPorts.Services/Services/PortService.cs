@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ShipsAndPorts.Services.Services
 {
-    public class PortService : BaseService<Port, PortApiModel>, IPortService
+    public class PortService : BaseService<PortApiModel, Port>, IPortService
     {
         public PortService(IMapper mapper): base(mapper)
         {

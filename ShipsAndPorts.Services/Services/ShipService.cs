@@ -7,7 +7,7 @@ using System;
 
 namespace ShipsAndPorts.Services.Services
 {
-    public class ShipService : BaseService<Ship, ShipApiModel>, IShipService
+    public class ShipService : BaseService<ShipApiModel, Ship>, IShipService
     {
         private readonly IShipRepository shipRepository;
         private readonly IPortRepository portRepository;
