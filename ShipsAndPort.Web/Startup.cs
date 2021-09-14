@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShipsAndPort.Web.Data;
 using ShipsAndPort.Web.Models;
+using ShipsAndPorts.Repositories.Configuration;
+using ShipsAndPorts.Services.Configuration;
 
 namespace ShipsAndPort.Web
 {
@@ -40,6 +42,12 @@ namespace ShipsAndPort.Web
 
             services.AddAuthentication()
                 .AddIdentityServerJwt();
+
+            // Add depndency injections & initialize db connection string
+            services
+                .ConfigureRepositories(Configuration)
+                .ConfigureServices();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
             // In production, the Angular files will be served from this directory
