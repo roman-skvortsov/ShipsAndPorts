@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShipsAndPorts.Core.Models.ApiModels;
 
 namespace ShipsAndPorts.Core.Services
 {
-    public interface IPortService
+    public interface IPortService : IBaseService<PortApiModel>
     {
     }
 }

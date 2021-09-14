@@ -6,8 +6,11 @@
 
   <ItemGroup>
     <Folder Include="DataModels\" />
-    <Folder Include="Services\" />
     <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
   </ItemGroup>
 
 </Project>
